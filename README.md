@@ -1,7 +1,3 @@
-Here is the README in English with the screenshots section included:
-
----
-
 # Blog Website
 
 ## Project Description
@@ -28,23 +24,29 @@ This project is a blog website application that allows users to create, edit, an
 
 ## Screenshots
 
-Below are screenshots of various features of the project:
+![image](https://github.com/user-attachments/assets/280cfdc6-30c5-49e0-9b37-56af61da4059)
+![image](https://github.com/user-attachments/assets/ad6ab948-3818-4148-b0f9-2a6e563239c0)
+![image](https://github.com/user-attachments/assets/7f75c932-c636-4ecb-ad13-c9b6779e6639)
+![image](https://github.com/user-attachments/assets/c3d130da-b4d8-4cd5-9f95-a1fef8854fe0)
+![image](https://github.com/user-attachments/assets/fc6086cf-2c01-45f8-bd59-b73def6a1cb8)
+![image](https://github.com/user-attachments/assets/9168ec44-fdf2-4589-89af-ffc69c82289c)
+![image](https://github.com/user-attachments/assets/5a5c2ce9-7dab-4384-af81-11a4fc489343)
+![image](https://github.com/user-attachments/assets/4e378e59-704c-43ec-a6da-d2c1226ea8dc)
+![image](https://github.com/user-attachments/assets/b64c85e9-44f4-42a7-af3d-7c820e50362c)
+![image](https://github.com/user-attachments/assets/2c32be97-b4af-401f-a44d-317de4a36d7d)
+![image](https://github.com/user-attachments/assets/c79d13e0-21f0-4118-817b-8a0771dc9d56)
+![image](https://github.com/user-attachments/assets/4314688c-2ed4-4f3f-a834-138774fdca7f)
+![image](https://github.com/user-attachments/assets/007863e6-3fd5-4b7b-b908-bd0c04c4fb37)
 
-### Home Page
 
-![Home Page](screenshots/homepage.png)
 
-### Blog Posts List
 
-![Blog Posts List](screenshots/blog-list.png)
 
-### Blog Post Details
 
-![Blog Post Details](screenshots/blog-details.png)
 
-### Add Comment
 
-![Add Comment](screenshots/add-comment.png)
+
+
 
 ## Installation and Setup
 
