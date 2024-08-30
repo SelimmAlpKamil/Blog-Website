@@ -1,0 +1,25 @@
+﻿@model EntityLayer.Concrete.Category
+
+@{
+    ViewBag.Title = "AdminUpdateCategory";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+
+
+<h2>Kategori Güncelleme Listesi</h2>
+
+<form class="form-check form-group" method="post">
+    @Html.TextBoxFor(x => x.CategoryId, new { @class = "form-control" , @type="hidden" })
+    <br />
+    @Html.Label("Kategori İsmi")
+    @Html.TextBoxFor(x => x.CategoryName, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x=>x.CategoryName)
+    <br />
+    @Html.Label("Kategoriy Açıklaması")
+    @Html.TextAreaFor(x => x.CategoryDescription, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x=>x.CategoryDescription)
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+
+</form>

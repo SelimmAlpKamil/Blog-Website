@@ -1,0 +1,23 @@
+﻿@model EntityLayer.Concrete.Subscribe
+
+
+<div class="site-section bg-lightx">
+    <div class="container">
+        <div class="row justify-content-center text-center">
+            <div class="col-md-5">
+                <div class="subscribe-1 ">
+                    <h2>Blog Bülteninin Kaçırmamak İçin Abone Ol</h2>
+                    <p class="mb-5">Yeni çıkan blogları kaçırmamak için aşağıda yer alan kısımdan mail bültenine kayıt olabilirsiniz.</p>
+
+                    <form method="post" class="d-flex" id="formSubscribe">
+                        <input type="text" class="form-control" placeholder="Mail Adresinizi giriniz..." name="MailName" required>
+                        <br />
+                        @Html.ValidationMessageFor(x => x.MailName)
+                        <button  class="btn btn-primary" >Abone Ol</button>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

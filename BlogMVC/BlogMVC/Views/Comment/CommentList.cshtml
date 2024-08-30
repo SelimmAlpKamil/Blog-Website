@@ -1,0 +1,35 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Comment>
+
+@{ int sayac = 0;}
+
+@foreach (var x in Model)
+{
+    sayac++;
+}
+
+<div class="pt-5">
+    <h3 class="mb-5">@sayac Yorum</h3>
+    <ul class="comment-list">
+        @foreach (var x in Model)
+        {
+
+
+            <li class="comment">
+                <div class="vcard">
+                    <img src="https://st3.depositphotos.com/6672868/14217/v/450/depositphotos_142179970-stock-illustration-user-profile-icon.jpg" alt="Image placeholder">
+                </div>
+                <div class="comment-body">
+                    <h3>@x.UserName</h3>
+                    <div class="meta">@x.CommentTime.ToString("dd-MM-yyyy")</div>
+                    <p>@x.CommentText</p>
+                </div>
+            </li>
+        }
+
+
+    </ul>
+    <!-- END comment-list -->
+
+    @Html.Action("LeaveCommnet", "Comment")
+
+</div>

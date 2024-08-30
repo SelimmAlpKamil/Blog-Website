@@ -1,0 +1,16 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Blog>
+
+@foreach (var x in Model)
+{
+<div class="sidebar-box">
+    <div class="bio text-center">
+        <img src="@x.Author.AuthorImage" alt="Image Placeholder" class="img-fluid mb-5" style="width:200px">
+        <div class="bio-body">
+            <h2>@x.Author.AuthorName</h2>
+            <p class="mb-4">@x.Author.AuthorAbout</p>
+          
+           
+        </div>
+    </div>
+</div>
+}

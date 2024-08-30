@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\BlogMVC",
+    "\\BlogMVC\\Views",
+    "\\BlogMVC\\Views\\Blog",
+    "\\BlogMVC\\Views\\Category",
+    "\\BlogMVC\\Views\\Login",
+    "\\BusinessLayer",
+    "\\BusinessLayer\\Concrete",
+    "\\DataAccessLayer",
+    "\\DataAccessLayer\\Migrations"
+  ],
+  "SelectedNode": "\\BlogMVC.sln",
+  "PreviewInSolutionExplorer": false
+}

@@ -1,0 +1,39 @@
+﻿@model EntityLayer.Concrete.Blog
+
+@{
+    ViewBag.Title = "AdminUpdateBlog";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<h2>Blog Güncelleme Listesi</h2>
+
+<form class="form-check form-group" method="post">
+    <br />
+    @Html.TextBoxFor(x => x.BlogId, new { @class = "form-control", @type = "hidden" })
+    <br />
+    @Html.Label("Blog Başlık")
+    @Html.TextBoxFor(x => x.BlogTitle, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.BlogTitle)
+    <br />
+    @Html.Label("Blog Resim")
+    @Html.TextBoxFor(x => x.BlogImage, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.BlogImage)
+    <br />
+    @Html.Label("Blog Tarih")
+    @Html.TextBoxFor(x => x.BlogDate, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.BlogDate)
+    <br />
+    @Html.Label("Blog Kategori")
+    @Html.DropDownListFor(x => x.CategoryId, (List<SelectListItem>)ViewBag.blogCaterory, new { @class = "form-control" })
+    <br />
+    @Html.Label("Blog Yazar")
+    @Html.DropDownListFor(x => x.AuthorId, (List<SelectListItem>)ViewBag.BlogAuthor, new { @class = "form-control" })
+    <br />
+    @Html.Label("Blog Yazısı")
+    @Html.TextAreaFor(x => x.BlogContent, 5, 20, new { @class = "form-control" })
+    @Html.ValidationMessageFor(x => x.BlogContent)
+    <br />
+    <button class="btn btn-info">Güncelle</button>
+
+</form>
+

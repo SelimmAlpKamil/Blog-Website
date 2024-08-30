@@ -1,0 +1,114 @@
+﻿@model IEnumerable<EntityLayer.Concrete.Contact>
+
+@{
+    ViewBag.Title = "AdminSendDetailMailList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+<!DOCTYPE html>
+
+<html>
+
+<body class="hold-transition sidebar-mini">
+
+
+
+    <!-- Content Header (Page header) -->
+
+    
+
+    <!-- Main content -->
+
+    <section class="content">
+
+        
+                <!-- /.col -->
+
+                <div class="col-md-12">
+
+                    <div class="card card-primary card-outline">
+
+                        <div class="card-header">
+
+                            <h3 class="card-title">Mesaj Detayları</h3>
+
+                        </div>
+
+                        <!-- /.card-header -->
+
+                        @foreach (var x in Model)
+                        {
+
+                        <div class="card-body p-0">
+
+                            <div class="mailbox-read-info">
+
+                                <h5>@x.Name @x.SurName</h5>
+
+                                <h6>
+
+                                    <b>Mail:</b>: @x.Mail
+
+                                    <span class="mailbox-read-time float-right">@x.MailDate.ToString("dd-MM-yyyy")</span>
+
+                                </h6>
+
+                            </div>
+
+                            
+
+                            
+
+
+                               
+
+                            </div>
+
+                            <!-- /.mailbox-controls -->
+
+                            <div class="mailbox-read-message">
+
+                                <p>@x.Subject</p>
+
+                               
+
+                            </div>
+
+                            <!-- /.mailbox-read-message -->
+                        }
+                        </div>
+
+                        
+
+                        <!-- /.card-body -->
+
+                        <div class="card-footer">
+                            @foreach(var x in Model) { 
+
+                            <a href="/Contact/AdminMailDelete/@x.ContactId/" class="btn btn-default"><i class="far fa-trash-alt"></i> Sil</a>
+
+                            }
+                        </div>
+
+                        <!-- /.card-footer -->
+                        
+                    </div>
+
+                    <!-- /.card -->
+
+                </div>
+                
+                <!-- /.col -->
+
+            </div>
+                        
+            <!-- /.row -->
+
+        </div>
+
+    </section>
+
+</body>
+
+</html>
+

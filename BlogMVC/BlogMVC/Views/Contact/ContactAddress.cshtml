@@ -1,0 +1,19 @@
+﻿@model IEnumerable<EntityLayer.Concrete.AboutInfo>
+
+<div class="col-md-5">
+
+    <div class="p-4 mb-3 bg-white">
+        @foreach (var x in Model)
+        {
+        <p class="mb-0 font-weight-bold">Adres</p>
+        <p class="mb-4">@x.Addres</p>
+
+        <p class="mb-0 font-weight-bold">Telefon</p>
+        <p class="mb-4">@x.Phone</p>
+
+        <p class="mb-0 font-weight-bold">Mail</p>
+        <p class="mb-0">@x.EmailAddress</p>
+        }
+    </div>
+
+</div>

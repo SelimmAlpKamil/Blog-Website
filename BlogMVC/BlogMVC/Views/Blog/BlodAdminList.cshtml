@@ -1,0 +1,247 @@
+﻿
+@{
+    ViewBag.Title = "BlodAdminList";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+
+@model IEnumerable<EntityLayer.Concrete.Blog>
+
+@{string color = " ";}
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+
+
+<body class="hold-transition sidebar-mini">
+
+
+
+    <!-- Main content -->
+
+    <section class="content">
+
+        <!-- Default box -->
+
+        <div class="card">
+
+            <div class="card-header">
+
+                <h3 class="card-title">Projects</h3>
+
+                <div class="card-tools">
+
+                    <button type="button" class="btn btn-tool" data-card-widget="collapse" data-toggle="tooltip" title="Collapse">
+
+                        <i class="fas fa-minus"></i>
+
+                    </button>
+
+
+
+                </div>
+
+            </div>
+
+            <div class="card-body p-0">
+
+                <table class="table table-striped projects">
+
+                    <thead>
+
+                        <tr>
+
+                            <th style="width: 1%">
+
+                                id
+
+                            </th>
+
+                            <th style="width: 20%">
+
+                                Blog Bailık
+
+                            </th>
+
+                            <th style="width: 20%">
+
+                                Yazar
+
+                            </th>
+
+                            <th>
+
+                                Begenme Oranı
+
+                            </th>
+
+                            <th style="width: 10%" class="text-center">
+
+                                Kategori
+
+                            </th>
+
+                            <th style="width: 30%">
+
+                            </th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+                        @foreach (var x in Model)
+                        {
+                            if (x.Category.CategoryName == "Yazılım")
+                            {
+                                color = "badge badge-success";
+                            }
+                            if (x.Category.CategoryName == "Kültür & Sanat")
+                            {
+                                color = "badge badge-warning";
+                            }
+                            if (x.Category.CategoryName == "Seyahat")
+                            {
+                                color = "badge badge-danger";
+                            }
+                            if (x.Category.CategoryName == "Teknoloji")
+                            {
+                                color = "badge badge-info";
+                            }
+                            if (x.Category.CategoryName == "Film & Dizi")
+                            {
+                                color = "badge badge-primary";
+                            }
+
+
+
+                            <tr>
+
+                                <td>
+
+                                    @x.BlogId
+
+                                </td>
+
+                                <td>
+
+                                    <a>
+
+                                        @x.BlogTitle
+
+                                    </a>
+
+                                </td>
+
+                                <td>
+
+                                    <ul class="list-inline">
+
+                                        <li class="list-inline-item">
+
+                                            <img alt="Avatar" class="table-avatar" src="@x.Author.AuthorImage" style="height:30px">
+                                            <span> @x.Author.AuthorName</span>
+
+                                        </li>
+
+                                    </ul>
+
+                                </td>
+
+                                <td class="project_progress">
+
+                                    <div class="progress progress-sm">
+
+                                        <div class="progress-bar bg-green" role="progressbar" aria-volumenow="57" aria-volumemin="0" aria-volumemax="100" style="width: @x.BlogRating%">
+
+                                        </div>
+
+                                    </div>
+
+                                    <small>
+
+                                        %@x.BlogRating
+
+                                    </small>
+
+                                </td>
+
+                                <td class="project-state">
+
+                                    <span class="@color">@x.Category.CategoryName</span>
+
+                                </td>
+
+                                <td class="project-actions text-right">
+
+                                    <a class="btn btn-primary btn-sm" href="/Blog/BlogDetails/@x.BlogId">
+
+                                        <i class="fas fa-folder">
+
+                                        </i>
+
+                                        Detaylar
+
+                                    </a>
+
+                                    <a class="btn btn-info btn-sm" href="/Blog/AdminUpdateBlog/@x.BlogId">
+
+                                        <i class="fas fa-pencil-alt">
+
+                                        </i>
+
+                                        Düzenle
+
+                                    </a>
+
+                                    <a class="btn btn-danger btn-sm" href="/Blog/AdminDeleteBlog/@x.BlogId">
+
+                                        <i class="fas fa-trash">
+
+                                        </i>
+
+                                        Sil
+
+                                    </a>
+
+                                    <a class="btn btn-warning btn-sm" href="/Blog/AdminGetByIdComment/@x.BlogId">
+
+                                        <i class="fas fa-trash">
+
+                                        </i>
+
+                                        Yorumlar
+
+                                    </a>
+
+                                </td>
+
+                            </tr>
+                        }
+
+                    </tbody>
+
+                </table>
+
+            </div>
+            <br />
+            <div style="margin-left:10px">
+                <a href="/Blog/AdminNewBlogAdd/" class="btn btn-info">Yeni Blog Ekle</a>
+            </div>
+            <br />
+
+            <!-- /.card-body -->
+
+        </div>
+
+        <!-- /.card -->
+
+    </section>
+
+</body>
+
+</html>
+
